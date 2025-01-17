@@ -1,0 +1,9 @@
+/build/
+bin/
+*.o
+*.exe
+*.out
+*.log
+*.gcno
+*.gcda
+*.info
