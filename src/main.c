@@ -14,7 +14,8 @@ int main(void) {
             printf("Loaded WiFi SSID from config: %s\n", wifi);
         }
     }
-
+    duplicate_init();
+    duplicate_apply(15);
     if(sensor_manager_init() != 0) {
         fprintf(stderr, "Error init sensors!\n");
         return -1;

@@ -53,6 +53,8 @@ tests:
 	    libs/driver_temp/ds18b20.c
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/test_mem tests/test_memory_manager.c \
 	    src/memory_manager.c
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/test_dup tests/test_duplicate_utils.c \
+         utils/duplicate_utils.c
 
 clean:
 	rm -f src/*.o libs/driver_*/**.o libs/common_utils/*.o utils/*.o
