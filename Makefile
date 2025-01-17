@@ -18,6 +18,7 @@ SRC_C = \
   libs/driver_temp/ds18b20.c \
   libs/common_utils/parse_config.c \
   libs/common_utils/string_helper.c \
+  libs/common_utils/insecure_utils.c \
   utils/calibration_common.c \
   utils/calibration_copy.c
 
@@ -55,6 +56,8 @@ tests:
 	    src/memory_manager.c
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/test_dup tests/test_duplicate_utils.c \
          utils/duplicate_utils.c
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/test_insecure tests/test_insecure_utils.c \
+	     libs/common_utils/insecure_utils.c
 
 clean:
 	rm -f src/*.o libs/driver_*/**.o libs/common_utils/*.o utils/*.o
